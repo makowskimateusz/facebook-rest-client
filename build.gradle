@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 group = 'pl.makowski.mateusz'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
@@ -27,16 +27,15 @@ repositories {
 dependencies {
 	compile('org.springframework.retry:spring-retry')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-aop')
+	compile('com.fasterxml.jackson.core:jackson-databind')
 	compile group: 'com.squareup.okhttp', name: 'okhttp', version: '2.7.5'
 	compile group: 'org.modelmapper', name: 'modelmapper', version: '0.7.5'
 	compile group: 'org.modelmapper.extensions', name: 'modelmapper-jackson', version: '1.1.0'
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '1.5.7.RELEASE'
 
-	compile("com.fasterxml.jackson.core:jackson-databind")
-
-	testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.spockframework:spock-core:1.1-groovy-2.4')
 	testCompile group: 'org.spockframework', name: 'spock-spring', version: '1.1-groovy-2.4'
 	testCompile group: 'com.github.tomakehurst', name: 'wiremock', version: '2.6.0'
-	testCompile('org.springframework.boot:spring-boot-starter-test')
 
 }
