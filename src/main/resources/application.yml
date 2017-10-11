@@ -1,0 +1,9 @@
+facebook:
+  clientId: 122543105120903
+  clientSecret: 62783936bb3f6b45c828da8263d6ffda
+  accessTokenUri: https://graph.facebook.com/oauth/access_token
+  graphSearchEndpoint: https://graph.facebook.com/search
+
+http-client:
+  readTimeout: 400
+  connectTimeout: 200
